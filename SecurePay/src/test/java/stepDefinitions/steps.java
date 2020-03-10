@@ -19,7 +19,10 @@ public class steps extends  BaseClass {
 	
 	public String fName,lName,email,company,phoneNumber,url,message,reasonval;
 	
-
+	public String getOsName() {
+		return System.getProperty("os.name");
+		
+	}
 	
 	@Given("User Launch Chrome browser")
 	public void user_Launch_Chrome_browser() {
