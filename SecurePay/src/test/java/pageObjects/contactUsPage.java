@@ -56,6 +56,12 @@ public class contactUsPage {
 	
 	public String GetTitle()
 	{
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return ldriver.getTitle();
 	}
 	
