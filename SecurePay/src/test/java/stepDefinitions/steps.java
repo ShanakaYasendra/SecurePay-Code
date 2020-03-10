@@ -23,7 +23,18 @@ public class steps extends  BaseClass {
 	
 	@Given("User Launch Chrome browser")
 	public void user_Launch_Chrome_browser() {
+	  	// this will fix the chrome browser os dependency
+		if(getOsName().startsWith("Windows"))
+		{
 	    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers/chromedriver.exe");
+		
+		}
+		else
+		{
+		    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers/chromedriver");
+
+		}
+		
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		
